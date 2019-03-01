@@ -1,0 +1,51 @@
+<div id = "wrapper">
+  <h1>Login and Registration with Django and Angular</h1>
+
+  <div id = "register">
+    <h2>Register</h2>
+
+    <ul class = "error" *ngIf = "regError">
+      <li *ngFor = "let e of regData.error">
+        {{e}}
+      </li>
+    </ul><br/>
+
+    <form (submit) = "registerUser()" #registerData = "ngForm">
+      Name: <br/><input type = "text" name = "name" [(ngModel)] = "register.name" 
+      #name = "ngModel" ngModel required><br/><br/>
+
+      Email: <br/><input type = "text" name = "email" [(ngModel)] = "register.email" 
+      #email = "ngModel" ngModel required><br/><br/>
+
+      Password: (Need to be at least 5 characters long and have a combination of lowercase characters, 
+      uppercase letters, and numbers and/or special characters)<br/>
+      <input type = "password" name = "password" [(ngModel)] = "register.password"
+      #password = "ngModel" ngModel required (ngModelChange) = "passStrength($event)"><br/>
+      <span id = "rank">Password strength: </span><span class = "{{strength}}"></span>
+      <br/><br/>
+
+      Confirm password: <br/><input type = "password" name = "password_confirm"
+      [(ngModel)] = "register.password_confirm" #password_confirm = "ngModel"
+      ngModel required><br/><br/>
+
+      <input type = "submit" class = "btn btn-light" value = "Register"
+        [disabled] = "registerData.form.invalid">
+    </form>
+  </div>
+
+  <div id = "login">
+    <h2>Login</h2>
+    <span class = "error" *ngIf = "logError">{{logData.error}}</span><br/>
+
+    <form (submit) = "loginUser()" #loginData = "ngForm">
+      Email: <br/><input type = "text" name = "email" [(ngModel)] = "login.email" 
+      #email = "ngModel" ngModel required><br/><br/>
+
+      Password: <br/><input type = "password" name = "password" [(ngModel)] = "login.password"
+      #password = "ngModel" ngModel required><br/><br/>
+
+      <input type = "submit" class = "btn btn-primary" value = "Login"
+        [disabled] = "loginData.form.invalid">
+    </form>
+  </div>
+</div>

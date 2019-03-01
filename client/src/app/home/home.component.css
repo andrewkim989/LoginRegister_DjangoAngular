@@ -1,0 +1,53 @@
+#top {
+    background-color: lightblue;
+}
+#top h2 {
+    margin: 20px;
+    margin-top: 10px;
+    display: inline-block;
+}
+#logout {
+    float: right;
+    font-size: 20px;
+    margin: 10px;
+    margin-right: 70px;
+}
+#blackline {
+    height: 3px;
+    background-color: black;
+}
+#wrapper {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 20px;
+}
+#wrapper h3 {
+    padding: 10px;
+}
+img {
+    width: 500px;
+}
+#top a {
+    float: right;
+    margin: 10px;
+    margin-right: 50px;
+    font-size: 24px;
+}
+#oops {
+    background-color: lightgrey;
+    height: 635px;
+    padding: 30px;
+}
+#oops h2 {
+    width: 700px;
+    margin: auto;
+}
+#oops a {
+    font-size: 24px;
+    margin-left: 33%;
+    width: 800px;
+}
+#oops img {
+    width: 300px;
+    margin-left: 35%;
+}

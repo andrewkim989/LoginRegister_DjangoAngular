@@ -1,0 +1,21 @@
+<body>
+  <div *ngIf = "data">
+    <div id = "top">
+      <h2>{{data.success}} {{data.user.name}}!</h2>
+      <a routerLink = "/logout">Logout</a>
+    </div>
+    <div id = "blackline"></div>
+    <div id = "wrapper">
+      <h3>You have signed in on: {{data.user.last_login | date: "medium"}}</h3>
+      <img src = "https://derpicdn.net/img/2019/1/2/1925098/medium.png" alt = "mane six"/>
+    </div>
+  </div>
+  <div *ngIf = "!data">
+    <div id = "oops">
+      <h2>Oops! Sorry! You cannot access this page unless you have an account!</h2>
+      <h2>Click on the link below to sign in or to create an account if you don't have one!</h2><br/>
+      <a routerLink = "/">Okay! Take me back to the login page!</a><br/>
+      <img src = "https://derpicdn.net/img/2013/4/4/288173/medium.png" alt = "idunno">
+    </div>
+  </div>
+</body>

@@ -1,0 +1,73 @@
+#wrapper {
+    padding-left: 30px;
+    background-color: lightgrey;
+    padding-bottom: 20px;
+}
+h1 {
+    text-align: center;
+    padding-top: 15px;
+}
+#register {
+    width: 450px;
+    margin: 20px;
+    margin-left: 150px;
+    padding: 30px;
+    background-color: #8ae787;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+#login {
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #acebaa;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+input[type = text], input[type = password] {
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    box-sizing: border-box;
+}
+.error {
+    color: rgb(199, 46, 46);
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#rank {
+    color: grey;
+}
+.none::after {
+    content: "";
+}
+.weak {
+    color: red;
+}
+.weak::after {
+    content: "Weak";
+}
+.fair {
+    color: orange;
+}
+.fair::after {
+    content: "Fair";
+}
+.good {
+    color: green;
+}
+.good::after {
+    content: "Good";
+}
+.strong {
+    color: blue;
+}
+.strong::after {
+    content: "Strong";
+}
